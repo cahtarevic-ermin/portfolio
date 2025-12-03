@@ -9,9 +9,15 @@ import { cn } from './utils';
 function DropdownMenu({
   ...props
 }: React.ComponentProps<typeof DropdownMenuPrimitive.Root>) {
-  return <DropdownMenuPrimitive.Root data-slot="dropdown-menu" {...props} onOpenChange={(open) => {
-    console.log('open', open);
-  }} />;
+  return (
+    <DropdownMenuPrimitive.Root
+      data-slot="dropdown-menu"
+      {...props}
+      onOpenChange={open => {
+        console.log('open', open);
+      }}
+    />
+  );
 }
 
 function DropdownMenuPortal({

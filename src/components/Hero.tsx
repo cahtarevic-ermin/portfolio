@@ -1,19 +1,17 @@
 import React from 'react';
-import { Button } from './ui/button';
+import { Button, ButtonLink } from './ui/button';
 import { Badge } from './ui/badge';
-import {
-  Mail,
-  Download,
-  ArrowDown,
-  Sparkles,
-} from 'lucide-react';
+import { Mail, Download, ArrowDown, Sparkles } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Github } from '../icons/github';
 import { Linkedin } from '../icons/linkedin';
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ maxHeight: "1000px" }}>
+    <section
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{ maxHeight: '1000px' }}
+    >
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5">
         {/* Floating geometric shapes */}
@@ -85,13 +83,14 @@ export function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Button>
 
-              <Button
+              <ButtonLink
                 variant="outline"
                 size="lg"
                 className="px-8 py-6 bg-background/50 backdrop-blur-sm border-primary/20 hover:bg-primary/10"
+                href="#projects"
               >
                 View My Work
-              </Button>
+              </ButtonLink>
             </div>
 
             {/* Social Links */}

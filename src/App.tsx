@@ -7,6 +7,7 @@ import { Experience } from './components/Experience';
 import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
 import { ThemeProvider } from './components/theme-provider';
+import { Logo } from './icons/logo';
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -19,6 +20,8 @@ export default function App() {
     { label: 'Contact', href: '#contact' },
   ];
 
+	const currentYear = new Date().getFullYear();
+
   return (
     <ThemeProvider defaultTheme="dark" storageKey="portfolio-theme">
       <div className="min-h-screen bg-background transition-colors duration-300">
@@ -27,7 +30,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               <div className="shrink-0">
-                <h3 className="tracking-tight">Ermin</h3>
+                <Logo width={35} fill="white" />
               </div>
 
               {/* Desktop Navigation */}
@@ -102,14 +105,16 @@ export default function App() {
 
         {/* Footer */}
         <footer className="bg-secondary/10 py-12 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h3 className="mb-4">Ermin</h3>
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+						<div className="mb-4">
+            <Logo width={35} fill="white" />
+						</div>
             <p className="text-muted-foreground mb-6">
-              Senior Software Engineer | Full-Stack Developer | DevOps
-              Enthusiast
+              Full-Stack Software Engineer building fast, scalable web
+              applications
             </p>
             <p className="text-sm text-muted-foreground">
-              © 2025 John Developer. All rights reserved.
+              © {currentYear} Ermin Cahtarevic. All rights reserved.
             </p>
           </div>
         </footer>
