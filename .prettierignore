@@ -1,0 +1,11 @@
+# Dependencies
+node_modules
+
+# Build outputs
+build
+dist
+.vite
+
+# Misc
+*.lock
+package-lock.json
